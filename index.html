@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House of the Dragon 🐉</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Cinzel', serif;
+    background:linear-gradient(180deg,#0d0000,#000);
+    color:#f5e6d3;
+}
+
+/* CONTENEDOR */
+.wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* TARJETA */
+.card{
+    width:100%;
+    max-width:380px;
+    background:rgba(0,0,0,.88);
+    border-radius:26px;
+    padding:26px;
+    text-align:center;
+    box-shadow:0 0 45px rgba(255,90,40,.6);
+    border:1px solid rgba(255,160,120,.35);
+    animation:fade 1.2s ease;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(20px)}
+    to{opacity:1; transform:translateY(0)}
+}
+
+/* IMÁGENES */
+.hero{
+    width:100%;
+    border-radius:18px;
+    margin:12px 0;
+    box-shadow:0 0 20px rgba(255,120,80,.6);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin:16px 0;
+}
+.gallery img{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 0 18px rgba(255,120,80,.45);
+}
+
+/* TEXTO */
+h1,h2{
+    color:#ffb86b;
+    margin:10px 0;
+}
+p{
+    font-size:14.5px;
+    line-height:1.6;
+}
+
+/* ICONOS */
+.icon{
+    font-size:52px;
+    animation:pulse 2.5s infinite alternate;
+}
+@keyframes pulse{
+    from{transform:scale(1)}
+    to{transform:scale(1.12)}
+}
+
+/* BOTÓN */
+button{
+    margin-top:18px;
+    padding:14px 36px;
+    border:none;
+    border-radius:40px;
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    background:linear-gradient(135deg,#ff512f,#f09819);
+    color:#2b0000;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(255,120,80,.8);
+}
+button:hover{transform:scale(1.08)}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- PANTALLA 1 -->
+<div class="card" id="inicio">
+    <div class="icon">🐉</div>
+
+    <img class="hero"
+    src="https://upload.wikimedia.org/wikipedia/en/2/2b/House_of_the_Dragon_logo.jpg"
+    alt="House of the Dragon">
+
+    <h1>El Reino del Dragón</h1>
+    <p>
+        Hay historias que no se cuentan,<br>
+        se descubren.
+    </p>
+
+    <button onclick="entrar()">🔥 Cruzar el fuego 🔥</button>
+</div>
+
+<!-- PANTALLA 2 -->
+<div class="card" id="mensaje" style="display:none;">
+    <div class="icon">👑</div>
+
+    <img class="hero"
+    src="https://upload.wikimedia.org/wikipedia/en/9/93/House_of_the_Dragon_poster.jpg"
+    alt="House of the Dragon Poster">
+
+    <h2>Feliz Cumpleaños</h2>
+
+    <p>
+        En esta casa, el fuego no consume…<br>
+        ilumina.<br><br>
+
+        Hoy celebramos a alguien<br>
+        elegante, auténtica y especial.
+    </p>
+
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Dragon_symbol.svg" alt="Dragon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Crown_icon.svg" alt="Crown">
+    </div>
+
+    <p>
+        Que este nuevo año te regale<br>
+        momentos intensos, sonrisas reales<br>
+        y todo lo que mereces ✨
+    </p>
+</div>
+
+</div>
+
+<script>
+function entrar(){
+    document.getElementById("inicio").style.display="none";
+    document.getElementById("mensaje").style.display="block";
+}
+</script>
+
+</body>
+</html>
